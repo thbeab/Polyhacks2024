@@ -1,6 +1,17 @@
-<h1 class="text-3xl font-bold underline">Items</h1>
-<ul class="list-none">
-  <li *ngFor="let item of items$ | async">
-    {{item.name}}
-  </li>
-</ul>
+<h1 class="text-3xl font-bold underline">Chat</h1>
+
+<div class="flex flex-col">
+    <input class="input input-bordered"type="text" [(ngModel)]="roomId">
+    <button class="btn btn-primary" (click) = "joinRoom()"> Join room {{roomId}}</button>
+</div>
+
+@for(message of messages$ | async; track message.id){
+    <div class="flex flex-col">
+        <p>{{message.content}}</p>
+    </div>
+  }
+
+<div class="flex flex-col">
+    <input class="input input-bordered" type="text" [(ngModel)]="newMessage.content">
+    <button class="btn btn-primary" (click) = "sendMessage()"> Send</button>
+</div>
