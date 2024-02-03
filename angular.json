@@ -88,8 +88,28 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "polyhacks:build:production",
+              "serveTarget": "polyhacks:serve:production"
+            },
+            "development": {
+              "buildTarget": "polyhacks:build:development",
+              "serveTarget": "polyhacks:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "21431c9c-5bba-413e-a44d-b65f4ad9618b"
   }
 }

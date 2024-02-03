@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "polyhacks-66e34": {
+      "hosting": {
+        "polyhacks": [
+          "polyhacks-66e34"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "polyhacks-66e34"
+  }
+}
